@@ -1,6 +1,4 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "bundle/phpfolding"]
-	path = bundle/phpfolding
-	url = git://github.com/vim-scripts/phpfolding.vim.git
+
