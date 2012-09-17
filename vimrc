@@ -31,7 +31,7 @@ set hidden
 
 "Set the color scheme. Change this to your preference.
 "Here's 100 to choose from: http://www.vim.org/scripts/script.php?script_id=625
-colorscheme darkspectrum 
+colorscheme koehler 
 
 "Set font type and size. Depends on the resolution. Larger screens, prefer h20
 "set guifont=ProggyCleanTT:h14
