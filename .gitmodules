@@ -29,3 +29,6 @@
 [submodule "bundle/zencoding-vim"]
 	path = bundle/zencoding-vim
 	url = git://github.com/mattn/zencoding-vim.git
+[submodule "bundle/jshint"]
+	path = bundle/jshint
+	url = git://github.com/sleistner/vim-jshint.git
