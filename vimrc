@@ -72,7 +72,6 @@ set incsearch
 set hlsearch
 
 " case insensitive search
-set ignorecase
 set smartcase
 
 "Hide MacVim toolbar by default
@@ -90,9 +89,6 @@ set mousehide
 "Shortcut to fold tags with leader (usually \) + ft
 nnoremap <leader>ft Vatzf
 
-" Create dictionary for custom expansions
-set dictionary+=/Users/jeff_way/.vim/dict.txt
-
 "Opens a vertical split and switches over (\v)
 nnoremap <leader>v <C-w>v<C-w>l
 
@@ -102,23 +98,11 @@ set splitbelow
 " session settings
 set sessionoptions=resize,winpos,winsize,buffers,tabpages,folds,curdir,help
 
-"Set up an HTML5 template for all new .html files
-"autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
-
-"Load the current buffer in Firefox - Mac specific.
-abbrev ff :! open -a firefox.app %:p<cr>
-
-"Map a change directory to the desktop - Mac specific
-nmap <leader>d :cd ~/Desktop<cr>:e.<cr>
-
-"Shortcut for editing  vimrc file in a new tab
-nmap <leader>ev :tabedit $MYVIMRC<cr>
+"Load the current buffer in Chrome- Mac specific.
+abbrev ff :! open -a google\ chrome.app %:p<cr>
 
 "Change zen coding plugin expansion key to shift + e
 let g:user_zen_expandabbr_key = '<C-e>'
-
-"Faster shortcut for commenting. Requires T-Comment plugin
-map <leader>c <c-_><c-_>
 
 "Saves time; maps the spacebar to colon
 nmap <space> :
@@ -175,23 +159,8 @@ nmap <C-l> <C-w>l
 "------------------------"
 "NERDTREE PLUGIN SETTINGS
 "------------------------"
-"Shortcut for NERDTreeToggle
-" nmap <leader>nt :NERDTreeToggle <CR>
-
 "Show hidden files in NerdTree
 let NERDTreeShowHidden=1
-
-"autopen NERDTree and focus cursor in new document
-"autocmd VimEnter * NERDTree
-"autocmd VimEnter * wincmd p
-
-"Helpeful abbreviations
-iab lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-iab llorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-
-"Spelling corrects. Just for example. Add yours below.
-iab teh the
-iab Teh The
 
 " Get to home dir easier
 " <leader>hm is easier to type than :cd ~
