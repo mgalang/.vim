@@ -1,4 +1,3 @@
-.vim
-====
+## My custom .vim and .vimrc
 
-My .vim
+All vim modules are in bundle/ and included using Pathogen
