@@ -17,15 +17,10 @@
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-[submodule "bundle/neocomplcache"]
-	path = bundle/neocomplcache
-	url = git://github.com/Shougo/neocomplcache.git
 [submodule "bundle/zencoding-vim"]
 	path = bundle/zencoding-vim
 	url = git://github.com/mattn/zencoding-vim.git
 [submodule "bundle/jshint"]
 	path = bundle/jshint
 	url = git://github.com/sleistner/vim-jshint.git
-[submodule "bundle/neosnippet"]
-	path = bundle/neosnippet
-	url = git://github.com/Shougo/neosnippet.git
+
