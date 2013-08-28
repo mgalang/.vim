@@ -102,7 +102,7 @@ set sessionoptions=resize,winpos,winsize,buffers,tabpages,folds,curdir,help
 abbrev ff :! open -a google\ chrome.app %:p<cr>
 
 "Change zen coding plugin expansion key to shift + e
-let g:user_zen_expandabbr_key = '<C-e>'
+let g:user_emmet_expandabbr_key = '<C-e>'
 
 "Saves time; maps the spacebar to colon
 nmap <space> :
