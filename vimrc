@@ -99,13 +99,10 @@ set splitbelow
 set sessionoptions=resize,winpos,winsize,buffers,tabpages,folds,curdir,help
 
 "Load the current buffer in Chrome- Mac specific.
-abbrev ff :! open -a google\ chrome.app %:p<cr>
+abbrev chrome :! open -a google\ chrome.app %:p<cr>
 
 "Change zen coding plugin expansion key to shift + e
 let g:user_emmet_expandabbr_key = '<C-e>'
-
-"Saves time; maps the spacebar to colon
-nmap <space> :
 
 "Automatically change current directory to that of the file in the buffer
 autocmd BufEnter * cd %:p:h
@@ -126,9 +123,6 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
   \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
   \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-
-"Map escape key to jj -- much faster
-imap jj <esc>
 
 "Delete all buffers (via Derek Wyatt)
 nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
