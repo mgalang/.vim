@@ -13,6 +13,27 @@ filetype plugin on
 filetype indent on
 syntax on
 
+" Vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Bundles
+Bundle 'jiangmiao/auto-pairs'
+Bundle 'sleistner/vim-jshint'
+Bundle 'scrooloose/nerdtree'
+"Bundle 'ervandew/supertab'
+Bundle 'scrooloose/syntastic'
+Bundle 'tomtom/tlib_vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-fugitive'
+Bundle 'pangloss/vim-javascript'
+Bundle 'jistr/vim-nerdtree-tabs'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
+Bundle 'mattn/emmet-vim'
+
+
 "Write the old file out when switching between files.
 set autowrite
 
@@ -181,6 +202,3 @@ set showmatch " show matching brackets
 " check syntax with Ctrl + L
 autocmd FileType php noremap <C-L> :!/usr/bin/env php -l %<CR>
 autocmd FileType phtml noremap <C-L> :!/usr/bin/env php -l %<CR>
-
-" CALL PATHOGEN
-call pathogen#infect()
