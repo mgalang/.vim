@@ -17,6 +17,8 @@ syntax on
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Bundle 'gmarik/vundle'
+
 " Bundles
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'sleistner/vim-jshint'
