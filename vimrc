@@ -1,7 +1,5 @@
 " .vimrc File
-" by: Jeffrey Way
-" jeffrey@jeffrey-way.com
-" http://net.tutsplus.com
+" copied from: Jeffrey Way
 " modified: Marc Galang
 
 "Forget compatibility with Vi. Who cares.
@@ -23,18 +21,19 @@ Bundle 'gmarik/vundle'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'sleistner/vim-jshint'
 Bundle 'scrooloose/nerdtree'
-"Bundle 'ervandew/supertab'
+Bundle 'ervandew/supertab'
 Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
 Bundle 'pangloss/vim-javascript'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 Bundle 'mattn/emmet-vim'
-
+Bundle 'StanAngeloff/php.vim'
 
 "Write the old file out when switching between files.
 set autowrite
@@ -43,7 +42,7 @@ set autowrite
 set ruler
 
 "Want a different map leader than \
-"set mapleader = ",";
+let mapleader = ","
 
 "Ever notice a slight lag after typing the leader key + command? This lowers
 "the timeout.
@@ -52,12 +51,8 @@ set timeoutlen=500
 "Switch between buffers without saving
 set hidden
 
-"Set the color scheme. Change this to your preference.
-"Here's 100 to choose from: http://www.vim.org/scripts/script.php?script_id=625
+"Set the color scheme.
 colorscheme Monokai 
-
-"Set font type and size. Depends on the resolution. Larger screens, prefer h20
-"set guifont=ProggyCleanTT:h14
 
 "Tab stuff
 set tabstop=2
@@ -70,9 +65,6 @@ set showcmd
 
 "Show lines numbers
 set number
-
-"Prefer relative line numbering?
-"set relativenumber"
 
 "Indent stuff
 set smartindent
@@ -115,14 +107,11 @@ nnoremap <leader>ft Vatzf
 "Opens a vertical split and switches over (\v)
 nnoremap <leader>v <C-w>v<C-w>l
 
-"Split windows below the current window.
-set splitbelow              
+"Split windows to the right
+set splitright
 
 " session settings
 set sessionoptions=resize,winpos,winsize,buffers,tabpages,folds,curdir,help
-
-"Load the current buffer in Chrome- Mac specific.
-abbrev chrome :! open -a google\ chrome.app %:p<cr>
 
 "Change zen coding plugin expansion key to shift + e
 let g:user_emmet_expandabbr_key = '<C-e>'
