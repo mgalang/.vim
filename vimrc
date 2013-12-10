@@ -21,7 +21,7 @@ Bundle 'gmarik/vundle'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'sleistner/vim-jshint'
 Bundle 'scrooloose/nerdtree'
-Bundle 'ervandew/supertab'
+" Bundle 'ervandew/supertab'
 Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -187,6 +187,8 @@ nmap <leader>bv :bel vsp
 "noremap ; l
 
 set showmatch " show matching brackets
+
+let g:snipMate_no_default_aliases=1
 
 " check syntax with Ctrl + L
 autocmd FileType php noremap <C-L> :!/usr/bin/env php -l %<CR>
