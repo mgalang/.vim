@@ -34,6 +34,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 Bundle 'mattn/emmet-vim'
 Bundle 'StanAngeloff/php.vim'
+Bundle 'eiginn/netrw'
 
 "Write the old file out when switching between files.
 set autowrite
@@ -90,7 +91,7 @@ set hlsearch
 set smartcase
 
 "Hide MacVim toolbar by default
-set go-=T
+"set go-=T
 
 "Hard-wrap paragraphs of text
 nnoremap <leader>q gqip
@@ -118,9 +119,6 @@ let g:user_emmet_expandabbr_key = '<C-e>'
 
 "Automatically change current directory to that of the file in the buffer
 autocmd BufEnter * cd %:p:h
-
-"Map code completion to , + tab
-imap <leader><tab> <C-x><C-o>
 
 " More useful command-line completion
 set wildmenu
