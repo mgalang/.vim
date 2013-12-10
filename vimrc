@@ -34,7 +34,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 Bundle 'mattn/emmet-vim'
 Bundle 'StanAngeloff/php.vim'
-Bundle 'eiginn/netrw'
+Bundle '2072/PHP-Indenting-for-VIm'
 
 "Write the old file out when switching between files.
 set autowrite
