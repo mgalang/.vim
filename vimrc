@@ -34,10 +34,13 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 Bundle 'mattn/emmet-vim'
 Bundle 'StanAngeloff/php.vim'
-Bundle '2072/PHP-Indenting-for-VIm'
+" Bundle '2072/PHP-Indenting-for-VIm'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
+Bundle 'vim-scripts/PHP-correct-Indenting'
 
-"Write the old file out when switching between files.
-set autowrite
+" Write the old file out when switching between files.
+" set autowrite
 
 "Display current cursor position in lower right corner.
 set ruler
@@ -91,7 +94,7 @@ set hlsearch
 set smartcase
 
 "Hide MacVim toolbar by default
-"set go-=T
+set go-=T
 
 "Hard-wrap paragraphs of text
 nnoremap <leader>q gqip
@@ -101,9 +104,6 @@ set foldenable
 
 "Hide mouse when typing
 set mousehide
-
-"Shortcut to fold tags with leader (usually \) + ft
-nnoremap <leader>ft Vatzf
 
 "Opens a vertical split and switches over (\v)
 nnoremap <leader>v <C-w>v<C-w>l
@@ -118,7 +118,7 @@ set sessionoptions=resize,winpos,winsize,buffers,tabpages,folds,curdir,help
 let g:user_emmet_expandabbr_key = '<C-e>'
 
 "Automatically change current directory to that of the file in the buffer
-autocmd BufEnter * cd %:p:h
+" autocmd BufEnter * cd %:p:h
 
 " More useful command-line completion
 set wildmenu
@@ -166,13 +166,12 @@ nmap <C-l> <C-w>l
 "Show hidden files in NerdTree
 let NERDTreeShowHidden=1
 
-" Get to home dir easier
-" <leader>hm is easier to type than :cd ~
-nmap <leader>hm :cd ~/ <CR>
-
 " Shortcut to opening a virtual split to right of current pane
 " Makes more sense than opening to the left
 nmap <leader>bv :bel vsp
+
+" Change directory to the current buffer when opening files.
+set autochdir"
 
 " Backups
 " set backupdir=~/.vim/tmp/backup// " backups
