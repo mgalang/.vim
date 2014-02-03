@@ -158,6 +158,12 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
+" Navigate faster
+nmap <s-j> 4j
+nmap <s-k> 4k
+nmap <s-h> 4h
+nmap <s-l> 4l
+
 "------------------------"
 "NERDTREE PLUGIN SETTINGS
 "------------------------"
