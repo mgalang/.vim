@@ -21,21 +21,20 @@ Bundle 'gmarik/vundle'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'sleistner/vim-jshint'
 Bundle 'scrooloose/nerdtree'
-" Bundle 'ervandew/supertab'
+""" Bundle 'ervandew/supertab'
 Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 " Bundle 'kchmck/vim-coffee-script'
 " Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
+" Bundle 'tpope/vim-surround'
 Bundle 'pangloss/vim-javascript'
-Bundle 'jistr/vim-nerdtree-tabs'
+" Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 Bundle 'mattn/emmet-vim'
-Bundle 'StanAngeloff/php.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
+"Bundle 'StanAngeloff/php.vim'
+"Bundle 'tpope/vim-repeat'
 
 " Write the old file out when switching between files.
 " set autowrite
@@ -207,6 +206,7 @@ map <silent> <leader>e :call ToggleVExplorer()<CR>
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 25
+let g:netrw_liststyle=3
 
 set showmatch " show matching brackets
 
