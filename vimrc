@@ -33,8 +33,10 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 Bundle 'mattn/emmet-vim'
+"Bundle 'vim-scripts/AutoComplPop'
 "Bundle 'StanAngeloff/php.vim'
 "Bundle 'tpope/vim-repeat'
+Bundle 'terryma/vim-multiple-cursors'
 
 " Write the old file out when switching between files.
 " set autowrite
