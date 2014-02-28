@@ -21,22 +21,17 @@ Bundle 'gmarik/vundle'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'sleistner/vim-jshint'
 Bundle 'scrooloose/nerdtree'
-""" Bundle 'ervandew/supertab'
 Bundle 'scrooloose/syntastic'
 Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 " Bundle 'kchmck/vim-coffee-script'
-" Bundle 'tpope/vim-fugitive'
-" Bundle 'tpope/vim-surround'
 Bundle 'pangloss/vim-javascript'
 " Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 Bundle 'mattn/emmet-vim'
-"Bundle 'vim-scripts/AutoComplPop'
-"Bundle 'StanAngeloff/php.vim'
-"Bundle 'tpope/vim-repeat'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'Shougo/neocomplcache.vim'
 
 " Write the old file out when switching between files.
 " set autowrite
@@ -164,6 +159,29 @@ nmap <s-j> 4j
 nmap <s-k> 4k
 nmap <s-h> 4h
 nmap <s-l> 4l
+
+" Neocompl
+" Use neocomplcache.
+let g:neocomplcache_enable_at_startup = 1
+" Use smartcase.
+let g:neocomplcache_enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+
+" close popup on up and down in insert mode
+let g:neocomplcache_enable_insert_char_pre = 1
+
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 "------------------------"
 "NERDTREE PLUGIN SETTINGS
