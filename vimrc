@@ -111,22 +111,11 @@ set sessionoptions=resize,winpos,winsize,buffers,tabpages,folds,curdir,help
 "Change zen coding plugin expansion key to shift + e
 let g:user_emmet_expandabbr_key = '<C-e>'
 
-"Automatically change current directory to that of the file in the buffer
-" autocmd BufEnter * cd %:p:h
-
 " More useful command-line completion
 set wildmenu
 
 "Auto-completion menu
 set wildmode=list:longest
-
-"http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
-set completeopt=longest,menuone
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
-  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
-  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
 "Delete all buffers (via Derek Wyatt)
 nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
@@ -147,12 +136,6 @@ if has("autocmd")
   autocmd bufwritepost .vimrc source ~/.vimrc
  augroup END
 endif
-
-" easier window navigation
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
 
 " Navigate faster
 nmap <s-j> 4j
@@ -189,44 +172,8 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 "Show hidden files in NerdTree
 let NERDTreeShowHidden=1
 
-" Shortcut to opening a virtual split to right of current pane
-" Makes more sense than opening to the left
-" nmap <leader>bv :bel vsp
-
 " Change directory to the current buffer when opening files.
 set autochdir"
-
-" Backups
-" set backupdir=~/.vim/tmp/backup// " backups
-" set directory=~/.vim/tmp/swap// " swap files
-" set backup " enable backup
-
-" Toggle Vexplore with <leader-e>
-function! ToggleVExplorer()
-  if exists("t:expl_buf_num")
-      let expl_win_num = bufwinnr(t:expl_buf_num)
-      if expl_win_num != -1
-          let cur_win_nr = winnr()
-          exec expl_win_num . 'wincmd w'
-          close
-          exec cur_win_nr . 'wincmd w'
-          unlet t:expl_buf_num
-      else
-          unlet t:expl_buf_num
-      endif
-  else
-      exec '1wincmd w'
-      Vexplore
-      let t:expl_buf_num = bufnr("%")
-  endif
-endfunction
-map <silent> <leader>e :call ToggleVExplorer()<CR>
-
-" open file to another split
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
-let g:netrw_liststyle=3
 
 set showmatch " show matching brackets
 
