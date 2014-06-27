@@ -22,10 +22,11 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'pangloss/vim-javascript'
 Bundle 'jistr/vim-nerdtree-tabs'
-" Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Lokaltog/vim-easymotion'
 " Required by vim-snimate
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
+Bundle 'greyblake/vim-preview'
 
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
