@@ -54,11 +54,14 @@ set hidden
 "Set the color scheme.
 colorscheme Monokai 
 
-"Tab stuff
+"Default tabs
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+
+" PHP tabs
+autocmd FileType php set tabstop=4|set shiftwidth=4|set softtabstop=4|set expandtab
 
 "Show command in bottom right portion of the screen
 set showcmd
