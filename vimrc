@@ -30,10 +30,12 @@ Bundle 'greyblake/vim-preview'
 
 Plugin 'bling/vim-airline'
 Plugin 'gregsexton/MatchTag'
+Plugin 'airblade/vim-gitgutter'
 Bundle 'garbas/vim-snipmate'
 Bundle 'honza/vim-snippets'
 Bundle 'mattn/emmet-vim'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'tpope/vim-fugitive'
 
 " Write the old file out when switching between files.
 " set autowrite
