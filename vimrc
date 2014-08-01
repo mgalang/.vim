@@ -13,29 +13,29 @@ syntax on
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-" Bundles
-Bundle 'jiangmiao/auto-pairs'
-Bundle 'sleistner/vim-jshint'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'pangloss/vim-javascript'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'Lokaltog/vim-easymotion'
+" Plugins
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'sleistner/vim-jshint'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'pangloss/vim-javascript'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'Lokaltog/vim-easymotion'
 " Required by vim-snimate
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'greyblake/vim-preview'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'greyblake/vim-preview'
 
 Plugin 'bling/vim-airline'
 Plugin 'gregsexton/MatchTag'
 Plugin 'airblade/vim-gitgutter'
-Bundle 'garbas/vim-snipmate'
-Bundle 'honza/vim-snippets'
-Bundle 'mattn/emmet-vim'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'tpope/vim-fugitive'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'mattn/emmet-vim'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-fugitive'
 
 " Write the old file out when switching between files.
 " set autowrite
