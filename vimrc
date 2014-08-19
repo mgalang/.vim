@@ -16,7 +16,7 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 
 " Plugins
-Plugin 'jiangmiao/auto-pairs'
+Plugin 'Raimondi/delimitMate'
 Plugin 'sleistner/vim-jshint'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
