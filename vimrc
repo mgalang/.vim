@@ -28,6 +28,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'greyblake/vim-preview'
 
+Plugin 'StanAngeloff/php.vim'
 Plugin 'bling/vim-airline'
 Plugin 'gregsexton/MatchTag'
 Plugin 'airblade/vim-gitgutter'
