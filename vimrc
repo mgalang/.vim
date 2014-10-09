@@ -29,14 +29,11 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'greyblake/vim-preview'
 
 Plugin 'StanAngeloff/php.vim'
-Plugin 'bling/vim-airline'
 Plugin 'gregsexton/MatchTag'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'mattn/emmet-vim'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-fugitive'
 
 " Write the old file out when switching between files.
 " set autowrite
