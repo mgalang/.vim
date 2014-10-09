@@ -26,7 +26,6 @@ Plugin 'Lokaltog/vim-easymotion'
 " Required by vim-snimate
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'greyblake/vim-preview'
 
 Plugin 'StanAngeloff/php.vim'
 Plugin 'gregsexton/MatchTag'
