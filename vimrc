@@ -16,6 +16,7 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 
 " Plugins
+Plugin 'nvie/vim-flake8'
 Plugin 'Raimondi/delimitMate'
 Plugin 'sleistner/vim-jshint'
 Plugin 'scrooloose/nerdtree'
@@ -27,8 +28,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 
-Plugin 'bling/vim-airline'
-Plugin 'gregsexton/MatchTag'
+"Plugin 'gregsexton/MatchTag'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
@@ -62,6 +62,9 @@ set expandtab
 
 " PHP whitespace
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+
+" PHP complete
+autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
 
 "Show command in bottom right portion of the screen
 set showcmd
@@ -157,6 +160,9 @@ let NERDTreeShowHidden=1
 set autochdir"
 
 set showmatch " show matching brackets
+let g:flake8_show_in_gutter=1
+let g:flake8_show_quickfix=0 
+autocmd BufWritePost *.py call Flake8()
 
 " check syntax with Ctrl + L
 autocmd FileType php noremap <C-L> :!/usr/bin/env php -l %<CR>
