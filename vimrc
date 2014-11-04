@@ -17,7 +17,7 @@ Plugin 'gmarik/vundle'
 
 " Plugins
 Plugin 'nvie/vim-flake8'
-Plugin 'Raimondi/delimitMate'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'sleistner/vim-jshint'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
@@ -163,6 +163,14 @@ set showmatch " show matching brackets
 let g:flake8_show_in_gutter=1
 let g:flake8_show_quickfix=0 
 autocmd BufWritePost *.py call Flake8()
+
+" Whitespace highlighting
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
 
 " check syntax with Ctrl + L
 autocmd FileType php noremap <C-L> :!/usr/bin/env php -l %<CR>
