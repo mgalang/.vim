@@ -28,12 +28,13 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 
-"Plugin 'gregsexton/MatchTag'
+Plugin 'gregsexton/MatchTag'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'mattn/emmet-vim'
-Plugin 'terryma/vim-multiple-cursors'
+Plugin 'kristijanhusak/vim-multiple-cursors'
+Plugin 'Shougo/neocomplete.vim'
 
 " Write the old file out when switching between files.
 " set autowrite
@@ -64,7 +65,7 @@ set expandtab
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
 " PHP complete
-autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
+" autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
 
 "Show command in bottom right portion of the screen
 set showcmd
@@ -85,6 +86,8 @@ set linespace=3
 set wrap
 set textwidth=79
 set formatoptions=qrn1
+
+set guifont=Pragmata_TT:h9
 
 "Set incremental searching"
 set incsearch
@@ -150,6 +153,10 @@ nmap <s-j> 4j
 nmap <s-k> 4k
 nmap <s-h> 4h
 nmap <s-l> 4l
+
+" Autocomplete
+let g:neocomplete#enable_at_startup = 1
+
 "------------------------"
 "NERDTREE PLUGIN SETTINGS
 "------------------------"
