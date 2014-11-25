@@ -16,7 +16,6 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 
 " Plugins
-Plugin 'nvie/vim-flake8'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'sleistner/vim-jshint'
 Plugin 'scrooloose/nerdtree'
@@ -25,19 +24,15 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Lokaltog/vim-easymotion'
 " Required by vim-snimate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
+"Plugin 'MarcWeber/vim-addon-mw-utils'
+"Plugin 'tomtom/tlib_vim'
 
 Plugin 'gregsexton/MatchTag'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'garbas/vim-snipmate'
+"Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'mattn/emmet-vim'
 Plugin 'kristijanhusak/vim-multiple-cursors'
-Plugin 'Shougo/neocomplete.vim'
-
-" Write the old file out when switching between files.
-" set autowrite
 
 "Display current cursor position in lower right corner.
 set ruler
@@ -65,7 +60,7 @@ set expandtab
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
 " PHP complete
-" autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
+autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
 
 "Show command in bottom right portion of the screen
 set showcmd
@@ -86,8 +81,6 @@ set linespace=3
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-
-set guifont=Pragmata_TT:h9
 
 "Set incremental searching"
 set incsearch
@@ -154,8 +147,12 @@ nmap <s-k> 4k
 nmap <s-h> 4h
 nmap <s-l> 4l
 
-" Autocomplete
-let g:neocomplete#enable_at_startup = 1
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 "------------------------"
 "NERDTREE PLUGIN SETTINGS
@@ -165,11 +162,6 @@ let NERDTreeShowHidden=1
 
 " Change directory to the current buffer when opening files.
 set autochdir"
-
-set showmatch " show matching brackets
-let g:flake8_show_in_gutter=1
-let g:flake8_show_quickfix=0 
-autocmd BufWritePost *.py call Flake8()
 
 " Whitespace highlighting
 highlight ExtraWhitespace ctermbg=red guibg=red
