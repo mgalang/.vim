@@ -24,12 +24,11 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Lokaltog/vim-easymotion'
 " Required by vim-snimate
-"Plugin 'MarcWeber/vim-addon-mw-utils'
-"Plugin 'tomtom/tlib_vim'
-
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
 Plugin 'gregsexton/MatchTag'
 Plugin 'airblade/vim-gitgutter'
-"Plugin 'garbas/vim-snipmate'
+Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'mattn/emmet-vim'
 Plugin 'kristijanhusak/vim-multiple-cursors'
@@ -97,6 +96,9 @@ set go-=T
 "Hard-wrap paragraphs of text
 nnoremap <leader>q gqip
 
+"Align inside brackets
+nnoremap <leader>i =i{
+
 "Enable code folding
 set foldenable
 
@@ -154,11 +156,18 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+let nerdtree_tabs_open_on_gui_startup=0
+
 "------------------------"
 "NERDTREE PLUGIN SETTINGS
 "------------------------"
 "Show hidden files in NerdTree
 let NERDTreeShowHidden=1
+
+"Nerdtree toggle
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
+let g:nerdtree_tabs_open_on_console_startup=0
 
 " Change directory to the current buffer when opening files.
 set autochdir"
@@ -170,6 +179,8 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+" Remove all whitespace
+nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 " check syntax with Ctrl + L
 autocmd FileType php noremap <C-L> :!/usr/bin/env php -l %<CR>
