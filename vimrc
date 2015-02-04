@@ -96,8 +96,11 @@ set go-=T
 "Hard-wrap paragraphs of text
 nnoremap <leader>q gqip
 
-"Align inside brackets
-nnoremap <leader>i =i{
+"Align inside braces
+nmap <leader>ai =i{
+
+"Align the whole page
+nmap <leader>aa mxgg=G'x
 
 "Enable code folding
 set foldenable
