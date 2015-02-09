@@ -23,9 +23,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'pangloss/vim-javascript'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Lokaltog/vim-easymotion'
-" Required by vim-snimate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
+Plugin 'bling/vim-airline'
 Plugin 'gregsexton/MatchTag'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'garbas/vim-snipmate'
@@ -33,6 +31,10 @@ Plugin 'honza/vim-snippets'
 Plugin 'mattn/emmet-vim'
 Plugin 'kristijanhusak/vim-multiple-cursors'
 Plugin 'shawncplus/phpcomplete.vim'
+
+" Required by vim-snimate
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
 
 "Display current cursor position in lower right corner.
 set ruler
