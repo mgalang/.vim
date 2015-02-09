@@ -32,6 +32,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'mattn/emmet-vim'
 Plugin 'kristijanhusak/vim-multiple-cursors'
+Plugin 'shawncplus/phpcomplete.vim'
 
 "Display current cursor position in lower right corner.
 set ruler
@@ -47,7 +48,7 @@ set timeoutlen=500
 set hidden
 
 "Set the color scheme.
-colorscheme Monokai 
+colorscheme Monokai
 
 "Default whitespace
 set tabstop=2
@@ -158,12 +159,17 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
-let nerdtree_tabs_open_on_gui_startup=0
+let php_sql_query=1
+let php_htmlInStrings=1
 
 "------------------------"
 "NERDTREE PLUGIN SETTINGS
 "------------------------"
+
+let nerdtree_tabs_open_on_gui_startup=0
+
 "Show hidden files in NerdTree
 let NERDTreeShowHidden=1
 
