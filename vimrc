@@ -31,7 +31,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'mattn/emmet-vim'
 Plugin 'kristijanhusak/vim-multiple-cursors'
 Plugin 'shawncplus/phpcomplete.vim'
-
 " Required by vim-snimate
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -165,6 +164,17 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
 let php_sql_query=1
 let php_htmlInStrings=1
+
+" Quick tab switching using leader key
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
 
 "------------------------"
 "NERDTREE PLUGIN SETTINGS
