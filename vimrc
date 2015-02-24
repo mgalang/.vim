@@ -131,6 +131,9 @@ set wildmode=list:longest
 "Delete all buffers (via Derek Wyatt)
 nmap <silent> ,da :exec "1," . bufnr('$') . "bd"<cr>
 
+"Disable multiline close
+let g:AutoPairsMultilineClose = 0
+
 "Bubble single lines (kicks butt)
 "http://vimcasts.org/episodes/bubbling-text/
 nmap <C-Up> ddkP
