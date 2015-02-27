@@ -189,7 +189,7 @@ let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
 
 " PHP array to object notation
-vnoremap <leader>ato :s/\$\(.*\)\['\(.*\)'\]/$\1->\2/g<CR>
+vnoremap <leader>ato :s/\%V\$\(.*\)\['\(.*\)'\]/$\1->\2/g<CR>
 
 "Easymotion mappings
 nmap <leader>s <Plug>(easymotion-s)
