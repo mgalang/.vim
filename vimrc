@@ -16,6 +16,7 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 
 " Plugins
+Plugin 'tpope/vim-fugitive'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'sleistner/vim-jshint'
 Plugin 'scrooloose/nerdtree'
