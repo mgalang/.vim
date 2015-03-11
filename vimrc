@@ -17,6 +17,7 @@ Plugin 'gmarik/vundle'
 
 " Plugins
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'sleistner/vim-jshint'
 Plugin 'scrooloose/nerdtree'
@@ -34,7 +35,10 @@ Plugin 'kristijanhusak/vim-multiple-cursors'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'tobyS/vmustache'
 Plugin 'tobyS/pdv'
-" Required by vim-snimate
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'marijnh/tern_for_vim'
+
+" Required by vim-snipmate
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 
@@ -229,6 +233,10 @@ nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 " Do not check php files with phpcs
 let g:syntastic_php_checkers = ['php', 'phpmd']
+
+" Remap snipmate to control-J
+imap <C-J> <Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
 
 " check syntax with Ctrl + L
 autocmd FileType php noremap <C-L> :!/usr/bin/env php -l %<CR>
