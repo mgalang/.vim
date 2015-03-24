@@ -194,7 +194,7 @@ let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
 
 " PHP array to object notation
-vnoremap <leader>ato :s/\%V\$\(.*\)\['\(.*\)'\]/$\1->\2/g<CR>
+nnoremap <leader>ato V :s/\%V\$\(.*\)\['\(.*\)'\]/$\1->\2/g<CR>
 
 "Easymotion mappings
 nmap <leader>s <Plug>(easymotion-s)
@@ -237,6 +237,12 @@ let g:syntastic_php_checkers = ['php', 'phpmd']
 " Remap snipmate to control-J
 imap <C-J> <Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
+
+" Quick window switching
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
 
 " check syntax with Ctrl + L
 autocmd FileType php noremap <C-L> :!/usr/bin/env php -l %<CR>
