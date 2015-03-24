@@ -3,12 +3,6 @@
 "Forget compatibility with Vi. Who cares.
 set nocompatible
 
-"Enable filetypes
-filetype on
-filetype plugin on
-filetype indent on
-syntax on
-
 " Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -28,19 +22,19 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'bling/vim-airline'
 Plugin 'gregsexton/MatchTag'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
 Plugin 'mattn/emmet-vim'
 Plugin 'kristijanhusak/vim-multiple-cursors'
 Plugin 'shawncplus/phpcomplete.vim'
-Plugin 'tobyS/vmustache'
-Plugin 'tobyS/pdv'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin 'marijnh/tern_for_vim'
 
-" Required by vim-snipmate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
+"Enable filetypes
+filetype on
+filetype plugin on
+filetype indent on
+syntax on
+
 
 "Display current cursor position in lower right corner.
 set ruler
@@ -189,10 +183,6 @@ noremap <leader>7 7gt
 noremap <leader>8 8gt
 noremap <leader>9 9gt
 
-" PDV
-let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
-nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
-
 " PHP array to object notation
 nnoremap <leader>ato V :s/\%V\$\(.*\)\['\(.*\)'\]/$\1->\2/g<CR>
 
@@ -234,9 +224,9 @@ nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 " Do not check php files with phpcs
 let g:syntastic_php_checkers = ['php', 'phpmd']
 
-" Remap snipmate to control-J
-imap <C-J> <Plug>snipMateNextOrTrigger
-smap <C-J> <Plug>snipMateNextOrTrigger
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Quick window switching
 nmap <silent> <A-Up> :wincmd k<CR>
