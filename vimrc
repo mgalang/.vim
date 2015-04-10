@@ -1,15 +1,21 @@
-" .vimrc File
+" ===================================================================
+" My Vimrc File
+" ===================================================================
 
-"Forget compatibility with Vi. Who cares.
+" No VI compatibility
 set nocompatible
 
-" Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" required
+filetype off
 
+" Vundle plugin management
+set rtp+=~/.vim/bundle/vundle
+call vundle#begin()
 Plugin 'gmarik/vundle'
 
-" Plugins
+" ===================================================================
+" PLUGINS
+" ===================================================================
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'jiangmiao/auto-pairs'
@@ -29,8 +35,13 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'marijnh/tern_for_vim'
 
+" Color schemes
+Plugin 'nathanlong/vim-colors-tomorrow'
+
+" Vundle end
+call vundle#end()
+
 "Enable filetypes
-filetype on
 filetype plugin on
 filetype indent on
 syntax on
