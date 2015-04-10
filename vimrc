@@ -34,6 +34,7 @@ Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'marijnh/tern_for_vim'
+Plugin 'Valloric/YouCompleteMe'
 
 " Color schemes
 Plugin 'nathanlong/vim-colors-tomorrow'
