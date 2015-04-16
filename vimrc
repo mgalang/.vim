@@ -30,14 +30,12 @@ Plugin 'gregsexton/MatchTag'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mattn/emmet-vim'
 Plugin 'kristijanhusak/vim-multiple-cursors'
-Plugin 'shawncplus/phpcomplete.vim'
+Plugin 'Shougo/vimproc'
+Bundle 'Shougo/unite.vim'
+Plugin 'm2mdas/phpcomplete-extended'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin 'marijnh/tern_for_vim'
 Plugin 'Valloric/YouCompleteMe'
-
-" Color schemes
-Plugin 'nathanlong/vim-colors-tomorrow'
 
 " Vundle end
 call vundle#end()
@@ -72,9 +70,6 @@ set expandtab
 
 " PHP whitespace
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
-
-" PHP complete
-autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
 
 "Show command in bottom right portion of the screen
 set showcmd
@@ -176,7 +171,7 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
 
 let php_sql_query=1
 let php_htmlInStrings=1
@@ -201,6 +196,12 @@ nnoremap <leader>ato V :s/\%V\$\(.*\)\['\(.*\)'\]/$\1->\2/g<CR>
 "Easymotion mappings
 nmap <leader>s <Plug>(easymotion-s)
 nmap <leader>w <Plug>(easymotion-bd-w)
+
+"------------------------"
+"YouCompleteMe
+"________________________"
+
+let g:ycm_autoclose_preview_window_after_completion=1
 
 "------------------------"
 "NERDTREE PLUGIN SETTINGS
