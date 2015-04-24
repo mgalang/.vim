@@ -36,6 +36,7 @@ Plugin 'm2mdas/phpcomplete-extended'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'chriskempson/vim-tomorrow-theme'
 
 " Vundle end
 call vundle#end()
@@ -60,7 +61,7 @@ set timeoutlen=500
 set hidden
 
 "Set the color scheme.
-colorscheme Monokai
+colorscheme Tomorrow-Night-Bright
 
 "Default whitespace
 set tabstop=2
