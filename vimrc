@@ -61,7 +61,7 @@ set timeoutlen=500
 set hidden
 
 "Set the color scheme.
-colorscheme Tomorrow-Night-Bright
+colorscheme Tomorrow-Night
 
 "Default whitespace
 set tabstop=2
