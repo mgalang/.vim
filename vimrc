@@ -32,7 +32,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'kristijanhusak/vim-multiple-cursors'
 Plugin 'Shougo/vimproc'
 Bundle 'Shougo/unite.vim'
-Plugin 'm2mdas/phpcomplete-extended'
+Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
@@ -172,7 +172,6 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
 
 let php_sql_query=1
 let php_htmlInStrings=1
