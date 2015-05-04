@@ -69,9 +69,6 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
-" PHP whitespace
-autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
-
 "Show command in bottom right portion of the screen
 set showcmd
 
