@@ -35,6 +35,8 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
 
 " Vundle end
 call vundle#end()
@@ -191,6 +193,10 @@ nnoremap <leader>ato V :s/\%V\$\(.*\)\['\(.*\)'\]/$\1->\2/g<CR>
 "Easymotion mappings
 nmap <leader>s <Plug>(easymotion-s)
 nmap <leader>w <Plug>(easymotion-bd-w)
+
+" Bind ctrlp to leader p
+nnoremap <leader>p :CtrlP<Cr>
+nnoremap <leader>pf :CtrlPFunky<Cr>
 
 "------------------------"
 "YouCompleteMe
